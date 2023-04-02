@@ -39,6 +39,10 @@ Go to command prompt or terminal, navigate to the folder that carries this code 
 ```bash
 python yt_downloader.py
 ```
+If the above command didn't work (especially if you're in linux), try this command:
+```bash
+python3 yt_downloader.py
+```
 And done! <br><br>
 If the code didn't show any error, you can find all your files downloaded in the <b>downloaded_files</b> folder.<br>
 <br>
