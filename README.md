@@ -12,21 +12,24 @@ First step, download/clone this code. <br><br>
 Once downloaded, you need to have python installed in your computer. <br>
 You can install python from here: https://www.python.org/ <br>
 <br>
-Once python is installed, make sure to install <b>pytube</b> package. <br>
-You can install the package using the following command in your command line:
+Once python is installed, make sure to install <b>pytube</b> and <b>tqdm</b> packages. <br>
+You can install the packages using the following command in your command line:
 ```bash
 pip install pytube
+pip install tqdm
 ```
 If the above command doesn't work, try the following:
 ```bash
 python -m pip install pytube
+python -m pip install tqdm
 ```
 or
 ```bash
 python3 -m pip install pytube
+python3 -m pip install tqdm
 ```
 
-Note: <b>You need to have Python installed to install pytube package.</b>
+Note: <b>You need to have Python installed to install the above packages.</b>
 <br><br>
 Great! Once everything is installed, go to the folder where you have this code and copy the link of the youtube videos you want to download, and paste them in a the file named as <b>file.txt</b>
 <br><br>
