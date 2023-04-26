@@ -1,3 +1,4 @@
+import time
 from pytube import YouTube
 from tqdm import tqdm
 
@@ -37,7 +38,14 @@ class YoutubeDownload:
                     continue
                 
                 yt = YouTube(each_link, on_progress_callback=self.tracking_progress, on_complete_callback=self.completing_track)
-                print("Downloading file no: " + str(i) + " - " + yt.title)
+                try:
+                    print("Downloading video no: " + str(i) + " - " + yt.title)
+                except:
+                    time.sleep(5)
+                    try:
+                        print("Downloading file no: " + str(i) + " - " + yt.title)
+                    except:
+                        print("Unable to access title of the video: " + str(i))
                 obj = yt.streams.filter(progressive=True, res="720p")
 
                 if not obj:
@@ -57,8 +65,9 @@ class YoutubeDownload:
                     print("No youtube object found.")
                     print(str(e))
 
-            except:
-                print("Could not download file no: " + str(i))
+            except Exception as e:
+                print("Could not download video no: " + str(i) + ": " + each_link)
+                print("Please try to download this same video again after sometime")
 
             i += 1
 
